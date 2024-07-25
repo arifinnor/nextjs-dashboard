@@ -6,9 +6,15 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const { customers, customer } = await useCustomer();
+  const { customers, customer, fetchCustomers } = await useCustomer();
 
+  await fetchCustomers();
   console.log(customers);
+  
 
-  return <p>Customer Page</p>;
+  return (
+    <>
+      <p>Asd {customers}</p>
+    </>
+  );
 }

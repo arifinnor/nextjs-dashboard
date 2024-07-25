@@ -7,7 +7,7 @@ export default async function useCustomer() {
   let isLoading = false;
 
   async function fetchCustomers(): Promise<void> {
-    const { data } = await $http.get('/v1/customers');
+    const { data } = await $http.get('/customer');
     customers = data.data;
   }
 
